@@ -1,0 +1,34 @@
+{
+  "name": "es-dev-server-import-graphql",
+  "version": "1.0.0",
+  "description": "An es-dev-server response transformer for importing GraphQL files",
+  "keywords": [
+    "json",
+    "es-dev-server"
+  ],
+  "author": "Benny Powers <web@bennypowers.com>",
+  "homepage": "https://github.com/bennypowers/es-dev-server-response-transformers#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennypowers/es-dev-server-response-transformers.git"
+  },
+  "scripts": {
+    "build": "rollup --input src/index.js --file index.js --format cjs",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/bennypowers/es-dev-server-response-transformers/issues"
+  },
+  "dependencies": {
+    "@kocal/rollup-plugin-graphql": "^1.0.0"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.48.1"
+  }
+}
