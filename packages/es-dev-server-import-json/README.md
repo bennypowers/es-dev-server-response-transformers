@@ -7,6 +7,8 @@
 ### `es-dev-server.config.js`
 
 ```js
+const json = require('es-dev-server-import-json');
+
 module.exports = {
   port: 8080,
   watch: true,
@@ -14,7 +16,7 @@ module.exports = {
   appIndex: 'demo/index.html',
   moduleDirs: ['node_modules', 'web_modules'],
   responseTransformers: [
-    require('es-dev-server-import-json'),
+    json()
   ],
 };
 ```
@@ -34,4 +36,3 @@ export data.map(item => item.toUpperCase()).join(' ') + '!';
   "is good for you"
 ]
 ```
-

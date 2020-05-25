@@ -6,14 +6,15 @@
 
 ### `es-dev-server.config.js`
 ```js
+const litcss = require('es-dev-server-import-css');
 module.exports = {
   port: 8080,
   watch: true,
   nodeResolve: true,
   appIndex: 'demo/index.html',
   moduleDirs: ['node_modules', 'web_modules'],
-  responseTransformers: [
-    require('es-dev-server-import-css'),
+  plugins: [
+    litcss()
   ],
 };
 ```
@@ -40,4 +41,3 @@ p { font-style: italic; }
 <script type="module" src="../lit-css.js"></script>
 <lit-css></lit-css>
 ```
-
