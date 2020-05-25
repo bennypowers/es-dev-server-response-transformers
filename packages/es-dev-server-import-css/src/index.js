@@ -1,10 +1,13 @@
-export default function importCSS({ url, body }) {
-  if (url.endsWith('.css')) {
-    return {
-      contentType: 'application/javascript',
-      body: `import { css } from 'lit-element'; export default css\`${body}\``,
-    };
+import rollupLitcss from 'rollup-plugin-lit-css';
+import { wrapRollupPlugin } from 'es-dev-server-rollup';
+
+export default function litcss(...opts) {
+  return {
+    ...wrapRollupPlugin(rollupLitcss(...opts)),
+
+    resolveMimeType(context) {
+      if (context.response.is('css'))
+        return 'js';
+    }
   }
 }
-
-

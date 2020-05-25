@@ -26,7 +26,8 @@
     "url": "https://github.com/bennypowers/es-dev-server-response-transformers/issues"
   },
   "dependencies": {
-    "@kocal/rollup-plugin-graphql": "^1.0.0"
+    "@kocal/rollup-plugin-graphql": "^1.0.0",
+    "es-dev-server-rollup": "^0.0.4"
   },
   "devDependencies": {
     "es-dev-server": "^1.48.1"

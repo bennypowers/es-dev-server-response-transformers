@@ -1,10 +1,13 @@
 import rollupPluginGraphql from '@kocal/rollup-plugin-graphql';
-const contentType = 'application/javascript';
-const { transform } = rollupPluginGraphql();
-const importGraphQL = function importGraphQL({ url, body }) {
-    if (url.endsWith('graphql') || url.endsWith('gql')) {
-        const { code } = transform(body, url);
-        return { body: code, contentType };
+import { wrapRollupPlugin } from 'es-dev-server-rollup';
+
+export default function graphql(...opts) {
+  return {
+    ...wrapRollupPlugin(rollupPluginGraphql(...opts)),
+
+    resolveMimeType(context) {
+      if (context.path.endsWith('graphql') || context.path.endsWith('gql'))
+        return 'js';
     }
-};
-export default importGraphQL;
+  }
+}

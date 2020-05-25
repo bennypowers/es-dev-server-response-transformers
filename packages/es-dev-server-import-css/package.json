@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/bennypowers/es-dev-server-response-transformers/issues"
+  },
+  "dependencies": {
+    "es-dev-server-rollup": "^0.0.4"
   }
 }
