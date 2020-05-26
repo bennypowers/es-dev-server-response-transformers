@@ -14,7 +14,9 @@ module.exports = {
   appIndex: 'demo/index.html',
   moduleDirs: ['node_modules', 'web_modules'],
   plugins: [
-    litcss()
+    litcss({
+      exclude: ['/src/styles.css'] // linked in html <head>
+    })
   ],
 };
 ```

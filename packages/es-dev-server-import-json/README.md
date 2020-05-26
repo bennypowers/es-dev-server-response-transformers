@@ -15,7 +15,7 @@ module.exports = {
   nodeResolve: true,
   appIndex: 'demo/index.html',
   moduleDirs: ['node_modules', 'web_modules'],
-  responseTransformers: [
+  plugins: [
     json()
   ],
 };

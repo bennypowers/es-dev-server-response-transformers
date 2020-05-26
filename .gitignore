@@ -104,4 +104,6 @@ dist
 .tern-port
 
 packages/**/*.js
+packages/**/*.d.ts
+packages/**/*.js.map
 !packages/**/src/*.js

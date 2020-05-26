@@ -9,17 +9,14 @@
   "author": "Benny Powers <web@bennypowers.com>",
   "homepage": "https://github.com/bennypowers/es-dev-server-response-transformers#readme",
   "license": "ISC",
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "index.d.ts"
-  ],
+  "main": "index.cjs.js",
+  "module": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bennypowers/es-dev-server-response-transformers.git"
   },
   "scripts": {
-    "build": "rollup --input src/index.js --file index.js --format cjs",
+    "build": "rollup --input index.js --file index.cjs.js --format cjs",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
@@ -30,6 +27,6 @@
     "es-dev-server-rollup": "^0.0.4"
   },
   "devDependencies": {
-    "es-dev-server": "^1.48.1"
+    "es-dev-server": "^1.53.0"
   }
 }

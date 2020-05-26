@@ -1,9 +1,0 @@
-{
-  "files": ["src/index"],
-  "compilerOptions": {
-    "module": "ESNext",
-    "rootDir": ".",
-    "target": "es2017",
-    "declaration": true
-  }
-}
