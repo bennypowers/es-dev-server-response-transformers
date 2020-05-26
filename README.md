@@ -1,4 +1,6 @@
-# Response Transformers for `es-dev-server`
+# Plugins for `es-dev-server`
+
+These let you import non-standard file types while running [es-dev-server](https://github.com/open-wc/open-wc)
 
 ## [import-css](./packages/es-dev-server-import-css)
 ```js
